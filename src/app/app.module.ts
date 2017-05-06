@@ -14,7 +14,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule,
+    SharedModule.forRoot(),
     LoginModule,
     DashboardModule
   ],
