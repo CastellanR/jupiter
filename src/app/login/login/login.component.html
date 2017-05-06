@@ -1,0 +1,6 @@
+<form [formGroup]="loginForm" (submit)="$event.preventDefault(); login()">
+  <input formControlName="email" placeholder="Email" type="text" />
+  <input formControlName="password" placeholder="Contraseña" type="password"/>
+
+  <button type="submit">Entrar</button>
+</form>
