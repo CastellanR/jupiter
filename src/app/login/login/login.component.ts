@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { LoginService } from '../../shared/services';
+import { AccountService } from '../../shared/services';
 
 @Component({
   selector: 'jup-login',
@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
               private router: Router,
-              private loginService: LoginService) { }
+              private accountService: AccountService) { }
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
@@ -26,8 +26,7 @@ export class LoginComponent implements OnInit {
   login() {
     const values = this.loginForm.value;
 
-    // TODO: use LoginService
-    this.loginService.login(values.email, values.password).subscribe(res => {
+    this.accountService.login(values.email, values.password).subscribe(res => {
       console.log(res);
 
       this.router.navigate(['dashboard']);

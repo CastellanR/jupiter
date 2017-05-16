@@ -3,7 +3,7 @@ import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
-import { LoginService } from './services';
+import { AccountService } from './services';
 
 @NgModule({
   imports: [
@@ -20,7 +20,7 @@ export class SharedModule {
     return {
       ngModule: SharedModule,
       providers: [
-        LoginService
+        AccountService
       ]
     };
   }
