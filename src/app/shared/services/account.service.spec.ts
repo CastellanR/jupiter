@@ -57,6 +57,34 @@ describe('AccountService', () => {
     expect(lastConnection.request.url.endsWith('account/login')).toBeTruthy();
   }));
 
+  // TODO
+  it('should not getDetails() if is not logged in', fakeAsync(() => {
+    const body = {
+      id: '22',
+      name: 'NAME',
+      email: 'email@email.com',
+      addresses: ['ADDRESS'],
+      carts: [{
+        createdAt: '2017-05-05T21:11:07.011Z',
+        id: '73db9ca5-fd11-4ea5-b7c7-daacd10c11ec',
+        products: [],
+        userId: 'b7509256-faed-4c58-843a-7553dada1c09'
+      }],
+      scope: ['admin'],
+      createdAt: '2016-02-02'
+    }
+    lastConnection.mockRespond(new Response(new ResponseOptions({
+      body: JSON.stringify(body)
+    })));
+    service.getDetails().subscribe(account => {
+      expect(account).toEqual(body);
+    });
+    tick();
+    expect(lastConnection.request.method).toBe(RequestMethod.Get);
+    expect(lastConnection.request.method).toBe(RequestMethod.Get);
+    expect(lastConnection.request.url.endsWith('account')).toBeTruthy();
+  }));
+
   it('should getDetails()', fakeAsync(() => {
     const body = {
       id: '22',

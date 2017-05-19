@@ -1,12 +1,12 @@
 // account
-export * from './account/auth-token';
-export * from './account/account';
+export * from './auth-token';
+export * from './account';
 
 // cart
-export * from './cart/cart';
+export * from './cart';
 
 // collection
-export * from './collection/collection';
+export * from './collection';
 
 // product
-export * from './product/product';
+export * from './product';

@@ -13,6 +13,14 @@ export class AccountService {
 
   constructor(private http: Http) {
     this.endpoint = makeUrl(apiConfig.host, apiConfig.version, 'account');
+
+    if(localStorage.getItem('authToken')) {
+      this.authToken = localStorage.getItem('authToken');
+    }
+  }
+
+  get token(): string {
+    return this.authToken;
   }
 
   login(email: string, password: string): Observable<AuthToken> {
@@ -23,7 +31,19 @@ export class AccountService {
       .post(makeUrl(this.endpoint, 'login'), body, {headers})
       .map((res: Response) => {
         return res.json();
+      })
+      .map((res: AuthToken) => {
+        if(res.authToken) {
+          localStorage.setItem('authToken', res.authToken);
+        }
+
+        return res;
       });
+  }
+
+  logout() {
+    localStorage.removeItem('authToken');
+    this.authToken = null;
   }
 
   getDetails(): Observable<Account> {

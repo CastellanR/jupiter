@@ -21,6 +21,10 @@ export class LoginComponent implements OnInit {
       email: [''],
       password: ['']
     });
+
+    if(this.accountService.token) {
+      this.router.navigate(['dashboard']);
+    }
   }
 
   login() {
@@ -29,7 +33,9 @@ export class LoginComponent implements OnInit {
     this.accountService.login(values.email, values.password).subscribe(res => {
       console.log(res);
 
-      this.router.navigate(['dashboard']);
+      if(res.authToken) {
+        this.router.navigate(['dashboard']);
+      }
     });
 
   }

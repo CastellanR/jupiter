@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
+    path: '', // TODO: it should be the home page
     redirectTo: 'login',
     pathMatch: 'full'
   }

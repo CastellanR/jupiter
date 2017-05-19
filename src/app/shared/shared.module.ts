@@ -4,6 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 import { AccountService } from './services';
+import { PanelComponent } from './core/panel/panel.component';
 
 @NgModule({
   imports: [
@@ -11,9 +12,10 @@ import { AccountService } from './services';
   ],
   exports: [
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    PanelComponent
   ],
-  declarations: []
+  declarations: [PanelComponent]
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders {

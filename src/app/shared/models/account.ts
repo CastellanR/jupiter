@@ -1,4 +1,4 @@
-import { Cart } from '../cart/cart';
+import { Cart } from '../cart';
 
 export interface Account {
   id: string;

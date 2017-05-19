@@ -1,9 +1,9 @@
-import { Collection } from '../collection/collection';
+import { Collection } from '../collection';
 
 export interface Product {
   enabled: boolean;
   sku: string;
-  name {
+  name: {
     en: string;
     pt: string;
   };
