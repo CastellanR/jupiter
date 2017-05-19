@@ -1,0 +1,27 @@
+.topbar {
+  display: flex;
+  align-items: stretch;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+
+  .left {
+    background-color: #29303a;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 240px;
+
+    .brand {
+      color: #697384;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+  }
+
+  .right {
+    flex: 2;
+  }
+}
