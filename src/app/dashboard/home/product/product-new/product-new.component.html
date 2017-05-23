@@ -1,0 +1,51 @@
+<header>
+  Nuevo Producto
+</header>
+<form class="col-8" [formGroup]="newProjectForm" (submit)= save(newProjectForm.value) (cancel)= clear() *ngIf="newProjectForm">
+  <div class="form-group row">
+    <label class="col-2 col-form-label" for="name">Nombre:</label>
+    <div class="col-5">
+      <input class="form-control" type="text" value="">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label" for="quantity">Cantidad:</label>
+    <div class="col-5">
+      <input class="form-control" type="text" value="">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label" for="tag">Etiquetas:</label>
+    <select class="form-control col-5">
+      <option>Android</option>
+      <option>Windows Phone</option>
+      <option>iOS</option>
+    </select>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label" for="collection">Colección:</label>
+    <select class="form-control col-5">
+      <option>Samsung</option>
+      <option>Iphone</option>
+      <option>Motorola</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="description">Descripción del Producto</label>
+    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">Imagen del Producto</label>
+    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+  </div>
+  <div class="form-group row">
+    <label for="price" class="col-2 col-form-label">Precio</label>
+    <div class="col-5">
+      <input class="form-control" type="text" value="" id="price">
+    </div>
+  </div>
+  <div class="form-group row">
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <button type="cancel" class="btn btn-danger">Cancelar</button>
+  </div>
+</form>
