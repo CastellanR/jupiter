@@ -1,0 +1,16 @@
+.content{
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  padding-top: 15%;
+  .btn-circle{
+    width: 20rem;
+    height: 20rem;
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 24px;
+    line-height: 1.33;
+    border-radius: 50%;
+  }
+}

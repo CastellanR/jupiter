@@ -1,7 +1,7 @@
 <header>
   Nuevo Producto
 </header>
-<form class="col-8" [formGroup]="newProjectForm" (submit)= save(newProjectForm.value) (cancel)= clear() *ngIf="newProjectForm">
+<form class="col-8" [formGroup]="newProductForm" (submit)= save(newProjectForm.value) (cancel)= clear() *ngIf="newProductForm">
   <div class="form-group row">
     <label class="col-2 col-form-label" for="name">Nombre:</label>
     <div class="col-5">
@@ -17,9 +17,7 @@
   <div class="form-group row">
     <label class="col-2 col-form-label" for="tag">Etiquetas:</label>
     <select class="form-control col-5">
-      <option>Android</option>
-      <option>Windows Phone</option>
-      <option>iOS</option>
+      <option *ngFor="let tag of tags">{{tag.name}}</option>
     </select>
   </div>
   <div class="form-group row">

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'jup-product-new',
@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 
 export class ProductNewComponent implements OnInit {
-  newProjectForm: FormGroup;
+  newProductForm: FormGroup;
 
 
   constructor(private formBuilder: FormBuilder) { }
@@ -17,9 +17,9 @@ export class ProductNewComponent implements OnInit {
     this.buildForm();
   }
   buildForm():void{
-      this.newProjectForm= null;
+      this.newProductForm= null;
       setTimeout(()=>{
-        this.newProjectForm = this.formBuilder.group({
+        this.newProductForm = this.formBuilder.group({
         name: '',
         quantity: '',
         description: '',
@@ -33,7 +33,7 @@ export class ProductNewComponent implements OnInit {
     this.product.description = value.description;
     this.product.tag = value.tag;
     this.product.collection = value.collection;
-    this.product.price = value.price;    
+    this.product.price = value.price;
     this.buildForm();
 }
 clear(){

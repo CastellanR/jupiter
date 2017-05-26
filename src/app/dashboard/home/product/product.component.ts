@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Routes } from '@angular/router';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
-import { ProductNewComponent } from './product-new/product-new.component';
-import { ProductManagementComponent } from './product-management/product-management.component';
 @Component({
   selector: 'jup-product',
   templateUrl: './product.component.html',
@@ -10,19 +8,11 @@ import { ProductManagementComponent } from './product-management/product-managem
 })
 export class ProductComponent implements OnInit {
 
+  ProductForm: FormGroup;
+
   constructor() { }
 
   ngOnInit() {
   }
- }
 
- const routes: Routes = [
-   {
-     path: 'nuevo',
-     component: ProductNewComponent
-   },
-   {
-     path: 'gestionar',
-     component: ProductManagementComponent
-   }
- ];
+ }
