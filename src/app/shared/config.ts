@@ -1,4 +1,4 @@
 export const apiConfig = {
-  host: 'http://localhost:8000',
+  host: 'http://172.17.0.1:3030',
   version: 'v1'
 }

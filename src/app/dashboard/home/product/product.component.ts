@@ -7,12 +7,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
-
-  ProductForm: FormGroup;
-
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
  }

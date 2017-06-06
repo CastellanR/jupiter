@@ -1,18 +1,35 @@
-<div class="form-group row">
-  <div class="col-6 content">
-    <button type="button" class="btn btn-info btn-circle">
-      <span class="fa fa-plus"></span>
-      <a [routerLink]="[nuevo]" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-        Crear Producto
-      </a>
-    </button>
-  </div>
-  <div class="col-6 content">
-    <button type="button" class="btn btn-success btn-circle">
-      <span class="fa fa-pencil-square-o"></span>
-      <a [routerLink]="[gestionar]" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-        Gestionar Producto
-      </a>
-    </button>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="panel">
+        <div class="panel-title">
+          <h2>Título</h2>
+        </div>
+
+        <div class="panel-body">
+          Contenido
+        </div>
+
+        <div class="panel-footer">
+          Pie
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="panel">
+        <div class="panel-title">
+          <h2>Título</h2>
+        </div>
+
+        <div class="panel-body">
+          Contenido
+        </div>
+
+        <div class="panel-footer">
+          Pie
+        </div>
+      </div>
+    </div>
   </div>
 </div>
