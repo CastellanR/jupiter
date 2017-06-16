@@ -11,6 +11,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ProductComponent } from './home/product/product.component';
 import { ProductNewComponent } from './home/product/product-new/product-new.component';
 import { ProductManagementComponent } from './home/product/product-management/product-management.component';
+import { ClientComponent } from './client/client.component';
+import { LoginComponent } from './login/login.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   imports: [
@@ -19,6 +22,6 @@ import { ProductManagementComponent } from './home/product/product-management/pr
     SharedModule,
     FormsModule
   ],
-  declarations: [DashboardComponent, HomeComponent, NavbarComponent, SidebarComponent, ProductComponent, ProductNewComponent, ProductManagementComponent]
+  declarations: [DashboardComponent, HomeComponent, NavbarComponent, SidebarComponent, ProductComponent, ProductNewComponent, ProductManagementComponent, ClientComponent, LoginComponent, CartComponent]
 })
 export class DashboardModule { }

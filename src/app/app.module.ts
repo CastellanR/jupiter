@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { LoginModule } from './login/login.module';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { WebModule } from './web/web.module';
 import { AppComponent } from './app.component';
 
 import './operators';
@@ -19,7 +20,8 @@ import './operators';
     AppRoutingModule,
     SharedModule.forRoot(),
     LoginModule,
-    DashboardModule
+    DashboardModule,
+    WebModule
   ],
   providers: [Title],
   bootstrap: [AppComponent]
