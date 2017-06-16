@@ -15,7 +15,7 @@ import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
     }
   `]
 })
-export class Review {
+export class ReviewComponent {
 
  @Input() active: boolean;
  @Input() position: number;

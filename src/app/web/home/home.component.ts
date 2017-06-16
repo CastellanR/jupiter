@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Product } from './../../dashboard/product/product.model';
 @Component({
-  selector: 'jup-home-1',
+  selector: 'jup-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })

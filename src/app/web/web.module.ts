@@ -14,11 +14,14 @@ import { ProductImageComponent } from './home/list-products/product-row/product-
 import { ProductPriceComponent } from './home/list-products/product-row/product-price/product-price.component';
 import { ProductReviewComponent } from './home/list-products/product-row/product-review/product-review.component';
 import { WebComponent } from './web/web.component';
+import { ReviewComponent } from './home/list-products/product-row/product-review/review/review';
+import { WebRoutingModule } from './web-routing.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    WebRoutingModule
   ],
-  declarations: [HomeComponent, LoginComponent, AccountComponent, CartComponent, CheckoutComponent, ListProductsComponent, CollectionsComponent, OffersComponent, BestSellingComponent, ProductRowComponent, ProductImageComponent, ProductPriceComponent, ProductReviewComponent, WebComponent]
+  declarations: [HomeComponent, LoginComponent, AccountComponent, CartComponent, CheckoutComponent, ListProductsComponent, CollectionsComponent, OffersComponent, BestSellingComponent, ProductRowComponent, ProductImageComponent, ProductPriceComponent, ProductReviewComponent, WebComponent, ReviewComponent]
 })
 export class WebModule { }

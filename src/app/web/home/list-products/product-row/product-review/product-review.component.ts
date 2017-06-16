@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
-import { Review } from './review/review';
 @Component({
   selector: 'jup-product-review',
   template: `
