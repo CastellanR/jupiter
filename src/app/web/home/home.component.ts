@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Product } from './../../dashboard/product/product.model';
+import { Collections } from './collections/collections.model';
 @Component({
   selector: 'jup-home',
   templateUrl: './home.component.html',
@@ -9,6 +10,7 @@ import { Product } from './../../dashboard/product/product.model';
 export class HomeComponent implements OnInit {
 
   products: Product[];
+  collections: Collections[];
 
   constructor() {
       this.products = [
@@ -33,6 +35,14 @@ export class HomeComponent implements OnInit {
           3,
           200
         )
+      ],
+      this.collections = [
+        new Collections( 'Motorola' ),
+        new Collections( 'Samsung' ),
+        new Collections( 'Iphone' ),
+        new Collections( 'LG' ),
+        new Collections( 'BLU' ),
+        new Collections( 'Sony' ),
       ]
     }
 

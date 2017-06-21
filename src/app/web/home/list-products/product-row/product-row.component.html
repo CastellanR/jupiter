@@ -1,11 +1,10 @@
-<jup-product-image [product]="product"></jup-product-image>
-<div class="content">
-  <div class="header">{{ product.name }}</div>
-  <div class="meta">
-    <div class="product-sku">SKU #{{ product.sku }}</div>
-  </div>
-  <div class="description">
-    <jup-product-review [starCount]="5" [rating]="10"></jup-product-review>
+<div class="container">
+  <jup-product-image [product]="product"></jup-product-image>
+  <div>
+    <div>{{ product.name }}</div>
+    <jup-product-price [price]="product.price"></jup-product-price>
+    <div>
+      <jup-product-review [starCount]="5" [rating]="10"></jup-product-review>
+    </div>
   </div>
 </div>
-<jup-product-price [price]="product.price"></jup-product-price>

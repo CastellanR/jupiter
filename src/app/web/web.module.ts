@@ -16,12 +16,14 @@ import { ProductReviewComponent } from './home/list-products/product-row/product
 import { WebComponent } from './web/web.component';
 import { ReviewComponent } from './home/list-products/product-row/product-review/review/review';
 import { WebRoutingModule } from './web-routing.module';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { SidebarComponent } from './home/sidebar/sidebar.component'
 
 @NgModule({
   imports: [
     CommonModule,
     WebRoutingModule
   ],
-  declarations: [HomeComponent, LoginComponent, AccountComponent, CartComponent, CheckoutComponent, ListProductsComponent, CollectionsComponent, OffersComponent, BestSellingComponent, ProductRowComponent, ProductImageComponent, ProductPriceComponent, ProductReviewComponent, WebComponent, ReviewComponent]
+  declarations: [HomeComponent, LoginComponent, AccountComponent, CartComponent, CheckoutComponent, ListProductsComponent, CollectionsComponent, OffersComponent, BestSellingComponent, ProductRowComponent, ProductImageComponent, ProductPriceComponent, ProductReviewComponent, WebComponent, ReviewComponent, NavbarComponent, SidebarComponent]
 })
 export class WebModule { }

@@ -1,3 +1,10 @@
-<div class="inventory-app">
-  <jup-list-products [productList]="products"></jup-list-products>
+<div class="container row">
+  <div class="col-lg-3">
+    <jup-sidebar [collectionList]="collections"></jup-sidebar>
+  </div>
+  <div class="col-lg-9">
+    <div class="home">
+      <jup-list-products [productList]="products"></jup-list-products>
+    </div>
+  </div>
 </div>

@@ -5,7 +5,7 @@ import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
   template: `<span class="star" [class.active]="active" (click)="handleRate($event)">&#9733;</span>`,
   styles: [`
     .star {
-      color: #efefef;
+      color: #dbd2d2;
       cursor: pointer;
       font-size: 2rem;
       transition: color .4s ease-in-out;

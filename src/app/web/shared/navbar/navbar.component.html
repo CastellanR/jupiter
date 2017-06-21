@@ -1,3 +1,28 @@
-<p>
-  navbar works!
-</p>
+<div class="container-fluid row justify-content-md-center wrapper align-items-center">
+  <div class="col col-xl-2 justify-content-md-center">
+    <div class="image">
+      <img src="assets/photos/icon.jpg" alt="">
+    </div>
+  </div>
+  <div class="col-xl-7">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Buscar...">
+      <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button">Buscar!</button>
+      </span>
+    </div>
+  </div>
+  <div class="col-xl-3">
+    <div class="btn-toolbar d-flex justify-content-around" role="toolbar">
+      <button type="button" class="btn btn-secondary">
+        <span class="fa fa-user-circle"> Mi cuenta</span>
+      </button>
+      <button type="button" class="btn btn-success" [routerLink]="mi-carrito">
+        <span class="fa fa-shopping-cart"> Mi carrito</span>
+      </button>
+      <button type="button" class="btn btn-info">
+        <span class="fa fa-bell"> Notificaciones</span>
+      </button>
+    </div>
+  </div>
+</div>
