@@ -2,20 +2,22 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { HomeComponent } from './home/home.component';
+import { ProductComponent } from './product/product.component';
+import { ProductNewComponent } from './product/product-new/product-new.component';
+import { ProductManagementComponent } from './product/product-management/product-management.component';
 
 const routes: Routes = [
-  {
-    path: 'dashboard',
-    component: DashboardComponent,
+  { path: '', redirectTo: 'dashboard', pathMatch: "full" },
+  { path: 'dashboard', component: DashboardComponent,
     children: [
-      {
-        path: '',
-        component: HomeComponent
-      }
-
+      { path: 'productos', component: ProductComponent,
+      children: [
+        { path: 'nuevo', component: ProductNewComponent },
+        { path: 'gestionar', component: ProductManagementComponent }
+      ] }
     ]
   }
+
 ];
 
 @NgModule({

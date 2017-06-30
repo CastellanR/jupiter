@@ -5,12 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SharedModule } from '../shared/shared.module';
-import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { ProductComponent } from './home/product/product.component';
-import { ProductNewComponent } from './home/product/product-new/product-new.component';
-import { ProductManagementComponent } from './home/product/product-management/product-management.component';
+import { ProductComponent } from './product/product.component';
+import { ProductNewComponent } from './product/product-new/product-new.component';
+import { ProductManagementComponent } from './product/product-management/product-management.component';
 import { ClientComponent } from './client/client.component';
 import { LoginComponent } from './login/login.component';
 import { CartComponent } from './cart/cart.component';
@@ -22,6 +21,6 @@ import { CartComponent } from './cart/cart.component';
     SharedModule,
     FormsModule
   ],
-  declarations: [DashboardComponent, HomeComponent, NavbarComponent, SidebarComponent, ProductComponent, ProductNewComponent, ProductManagementComponent, ClientComponent, LoginComponent, CartComponent]
+  declarations: [DashboardComponent, NavbarComponent, SidebarComponent, ProductComponent, ProductNewComponent, ProductManagementComponent, ClientComponent, LoginComponent, CartComponent]
 })
 export class DashboardModule { }

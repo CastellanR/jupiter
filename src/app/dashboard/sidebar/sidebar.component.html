@@ -3,20 +3,20 @@
     <ul class="nav-menu">
       <li class="menu-title">Navigation</li>
       <li class="active">
-        <a [routerLink]="[productos]">
-          <i class="fa fa-product-hunt"></i>
-          <span>Productos</span>
-        </a>
+        <i class="fa fa-product-hunt"></i>
+        <span>Productos</span>
+        <ul class="nav-second-level nav-menu">
+          <li>
+            <a [routerLink]="['/dashboard','productos','nuevo']">Nuevo</a>
+          </li>
+          <li>
+            <a [routerLink]="['/dashboard','productos','gestionar']">Gestionar</a>
+          </li>
+        </ul>
       </li>
       <li>
-        <a href="">
-          <i class="fa fa-address-book"></i>
-          <span>Clientes</span>
-        </a>
-        <ul class="nav-second-level nav-menu">
-          <li><a href="">Submenu</a></li>
-          <li><a href="">Submenu</a></li>
-        </ul>
+        <i class="fa fa-address-book"></i>
+        <span>Clientes</span>
       </li>
     </ul>
   </div>

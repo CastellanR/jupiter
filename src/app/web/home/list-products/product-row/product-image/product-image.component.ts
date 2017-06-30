@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Product } from './../../../../../dashboard/product/product.model';
 @Component({
   selector: 'jup-product-image',
   templateUrl: './product-image.component.html',
@@ -8,7 +7,7 @@ import { Product } from './../../../../../dashboard/product/product.model';
 })
 export class ProductImageComponent implements OnInit {
 
-  @Input() product: Product;
+  @Input() product: any;
 
   constructor() { }
 

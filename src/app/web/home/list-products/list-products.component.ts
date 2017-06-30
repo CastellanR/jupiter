@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Product } from './../../../dashboard/product/product.model';
 @Component({
   selector: 'jup-list-products',
   templateUrl: './list-products.component.html',
@@ -8,7 +7,7 @@ import { Product } from './../../../dashboard/product/product.model';
 })
 export class ListProductsComponent implements OnInit {
 
-  @Input() productList: Product[];
+  @Input() productList: any;
 
   constructor() { }
 
